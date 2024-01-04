@@ -1,0 +1,11 @@
+<section class="paginacion">
+  <ul *ngIf="pagination.totalPages > 0">
+    <li *ngIf="pagination.currentPage !== 1"><a  class="item-pagination" (click)="previousPage()"><</a></li>
+    <li *ngFor="let item of listItems">
+      <a class="item-pagination" (click)="selectPage(item)" [class.active]="item == pagination.currentPage">
+        {{ item }}
+      </a>
+    </li>
+    <li *ngIf="pagination.currentPage !== pagination.totalPages"><a class="item-pagination" (click)="nextPage()">></a></li>
+  </ul>
+</section>

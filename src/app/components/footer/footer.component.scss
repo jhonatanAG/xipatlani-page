@@ -1,0 +1,83 @@
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 0;
+}
+
+.footer_area {
+  padding: 60px 0 20px;
+  position: relative;
+  color: #fff;
+  z-index: 100;
+  background: #222;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.toolbar-options {
+  margin-left: .7rem;
+  margin-right: .7rem;
+}
+
+.ftr_social_icon li {
+  display: inline-block;
+  text-align: center;
+  padding: 4px;
+}
+
+.ftr_social_icon ul li a {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 17px;
+  height: 40px;
+  line-height: 32px;
+  padding: 4px 8px;
+  width: 40px;
+  transition: .5s;
+}
+
+.face:hover {
+  background: #1877f2;
+  border-color: #fff;
+  color: #fff;
+}
+
+.whats:hover {
+  background: #25d366;
+  border-color: #fff;
+  color: #fff;
+}
+
+.insta:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-color: #fff;
+  color: #fff;
+}
+
+.ftr_btm_area {
+  background: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px dotted #888;
+  margin-top: 28px;
+  z-index: 100;
+  position: relative;
+}
+
+.copyright_text {
+  margin: 6px 0;
+}
+
+.payment_mthd_icon li {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+
+h4 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,69 @@
+<div class="content">
+  <h2 class="subtittle-1">Contáctanos para mas información</h2>
+  <p class="description-big">Para ponerse en contacto con nosotros puede hacerlo a traves de los siguientes medios</p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <!-- Oficina -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 box-icon">
+              <mat-icon class="contact-icon">location_on</mat-icon>
+            </div>
+            <div class="col-md-10">
+              <p class="subtittle-2">Nuestra Oficina</p>
+              <p class="description">Av. Universidad 468-Ofic. 5 y 6, Colonia Vértiz Narvarte, Benito Juárez, 03600
+                Ciudad de México, CDMX</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 box-icon">
+              <mat-icon class="contact-icon">email</mat-icon>
+            </div>
+            <div class="col-md-10">
+              <p class="subtittle-2">Email</p>
+              <p class="description">reservaciones@xipatlani.com.mx</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Telefono -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 box-icon">
+              <mat-icon class="contact-icon">call</mat-icon>
+            </div>
+            <div class="col-md-10">
+              <p class="subtittle-2">Llamanos</p>
+              <p class="description">558 930 9113</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <form [formGroup]="formContact">
+        <div class="row">
+          <div class="col-md-6">
+            <input class="form-box" type="text" placeholder="Nombre completo" formControlName="applicant">
+          </div>
+          <div class="col-md-6">
+            <input class="form-box" type="text" placeholder="Email, Telefono, etc" formControlName="contact">
+          </div>
+        </div>
+        <input class="form-box" type="text" placeholder="Asunto">
+        <br>
+        <textarea class="form-box" placeholder="Descripción" formControlName="description"></textarea>
+        <button type="button" class="btn contact-button" (click)="send()" [disabled]="load">ENVIAR</button>
+      </form>
+      <load-ellipsis *ngIf="load"></load-ellipsis>
+    </div>
+  </div>
+</div>

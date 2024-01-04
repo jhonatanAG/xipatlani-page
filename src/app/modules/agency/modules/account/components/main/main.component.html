@@ -1,0 +1,15 @@
+<app-banner></app-banner>
+
+<div class="container">
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Mis Datos">
+      <app-info></app-info>
+    </mat-tab>
+    <mat-tab label="Usuarios">
+      <app-users></app-users>
+    </mat-tab>
+    <mat-tab *ngIf="currentUser.user.type == 'SUPER_ADMIN' || currentUser.user.type == 'ADMIN'" label="Reportes">
+      <app-reports></app-reports>
+    </mat-tab>
+  </mat-tab-group>
+</div>

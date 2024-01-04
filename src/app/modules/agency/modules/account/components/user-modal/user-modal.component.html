@@ -1,0 +1,38 @@
+<h3 style="margin-top: 20px; font-weight: bold;">Usuario Admin</h3>
+<form *ngIf="formUser.controls['type'].value != 'SUPER_ADMIN'" [formGroup]="formUser">
+  <label for="name">Nombre </label>
+  <input id="name" formControlName="name" type="text" class="form-control" placeholder="Nombre">
+  <label for="lastName">Apellido</label>
+  <input id="lastName" formControlName="lastName" type="text" class="form-control" placeholder="Apellido">
+  <label for="email">email</label>
+  <input id="email" formControlName="email" type="email" class="form-control" placeholder="example@domain.com">
+  <label for="password">password</label>
+  <input id="password" formControlName="password" type="password" class="form-control">
+  <label for="checkPassword">confirmar contraseña</label>
+  <input id="checkPassword" formControlName="checkPassword" type="password" class="form-control">
+  <label for="type">tipo</label>
+  <select id="type" formControlName="type" class="form-control">
+    <option value="ADMIN" style="color: red;">Admin</option>
+    <option value="USER" style="color: green;">User</option>
+  </select>
+  <label for="status">status</label>
+  <select id="status" formControlName="status" class="form-control">
+    <option value="ACTIVE" style="color: green;">Activo</option>
+    <option value="INACTIVE" style="color: red;">Inactivo</option>
+  </select>
+  <div style="text-align: end;">
+    <button type="button" class="btn btn-danger" (click)="close()" style="margin: 1pc;">Cancelar</button>
+    <button type="button" class="btn btn-success" (click)="save()" style="margin: 1pc;">Guardar</button>
+  </div>
+</form>
+
+<form *ngIf="formUser.controls['type'].value == 'SUPER_ADMIN'" [formGroup]="formUser">
+  <label for="password">password</label>
+  <input id="password" formControlName="password" type="password" class="form-control">
+  <label for="checkPassword">confirmar contraseña</label>
+  <input id="checkPassword" formControlName="checkPassword" type="password" class="form-control">
+  <div style="text-align: end;">
+    <button type="button" class="btn btn-danger" (click)="close()" style="margin: 1pc;">Cancelar</button>
+    <button type="button" class="btn btn-success" (click)="save()" style="margin: 1pc;">Guardar</button>
+  </div>
+</form>

@@ -1,0 +1,30 @@
+<div class="container spacer">
+  <div class="card">
+    <div class="card-body">
+      <div *ngIf="!client" style="text-align: center; margin: 100px 0;">
+        <load-ellipsis></load-ellipsis>
+      </div>
+      <div *ngIf="client">
+        <h2 style="color: #2b57a4; font-size: 26px">{{ client.name }}</h2>
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <h3><strong class="weigth-lite">Numero de Cuenta:</strong> {{ client.idIcaav }}</h3>
+            <h3><strong class="weigth-lite">Razón Social:</strong> {{ client.socialReason }}</h3>
+            <h3><strong class="weigth-lite">RFC:</strong> {{ client.rfc }}</h3>
+            <h3><strong class="weigth-lite">Numero de Sectur:</strong> {{ client.secturNumber }}</h3>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h3><strong class="weigth-lite">Director o Dueño:</strong> {{ client.ownerName }}</h3>
+            <h3><strong class="weigth-lite">email:</strong> {{ client.email }}</h3>
+            <h3><strong class="weigth-lite">Telefono:</strong> {{ client.phone }}</h3>
+            <h3><strong class="weigth-lite">Celular:</strong> {{ client.cellphone }}</h3>
+          </div>
+        </div>
+        <h3 class="without-spacer-bottom"><strong class="weigth-lite">Dirección Fiscal:</strong> </h3>
+        <p>{{ client.fiscalAddress }}</p>
+        <h3 class="without-spacer-bottom"><strong class="weigth-lite">Dirección Comercial:</strong> </h3>
+        <p>{{ client.commercialAddress }}</p>
+      </div>
+    </div>
+  </div>
+</div>

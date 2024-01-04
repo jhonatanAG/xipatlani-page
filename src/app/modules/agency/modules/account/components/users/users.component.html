@@ -1,0 +1,41 @@
+<div class="container spacer">
+  <div class="card">
+    <div class="card-body">
+      <div *ngIf="currentUser.user.type == 'SUPER_ADMIN' || currentUser.user.type == 'ADMIN'" style="text-align: end;">
+        <button type="button" class="btn btn btn-info spacer-button" (click)="openModalUser()">Agregar Usuario</button>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">email</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Estatus</th>
+            <th scope="col">Opcs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <th scope="row">{{ user.id }}</th>
+            <td>{{ user.name }} {{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.type }}</td>
+            <td>{{ user.status }}</td>
+            <td>
+              <div *ngIf="currentUser.user.type == 'SUPER_ADMIN' || currentUser.user.type == 'ADMIN'">
+                <span class="options-table">
+                  <mat-icon style="cursor: pointer" matTooltip="Editar" (click)="openModalUser(user)">edit</mat-icon>
+                </span>
+                <span *ngIf="currentUser.user.id != user.id && user.type != 'SUPER_ADMIN'" class="options-table">
+                  <mat-icon style="cursor: pointer" matTooltip="Eliminar" (click)="deleteUser(user.id)">delete
+                  </mat-icon>
+                </span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

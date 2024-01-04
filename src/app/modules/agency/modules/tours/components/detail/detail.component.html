@@ -1,0 +1,11 @@
+<div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+  <div *ngIf="loadInfo" style="text-align: center; margin-top: 200px; margin-bottom: 200px;">
+    <load-ellipsis></load-ellipsis>
+  </div>
+  <div *ngIf="!loadInfo">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <img [src]="destiny.image" style="width: 100%;" alt="">
+    </div>
+    <div [innerHtml]="destiny.html_info"></div>
+  </div>
+</div>

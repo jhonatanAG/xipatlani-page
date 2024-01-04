@@ -1,0 +1,21 @@
+<div class="toolbar">
+  <a routerLink="/home" routerLinkActive="active">
+    <img src="assets/logos/Logo_fondo_negro.png" height="80px" alt="Logo Xipatlani">
+  </a>
+  <span class="spacer"></span>
+  <ul *ngIf="!authService.isLogged">
+    <li><a routerLink="/home" routerLinkActive="active">Inicio</a></li>
+    <li><a routerLink="/home/about-us" routerLinkActive="active">Acerca de nosotros</a></li>
+    <li><a routerLink="/home/services" routerLinkActive="active">Servicios</a></li>
+    <li><a routerLink="/home/contact" routerLinkActive="active">Contacto</a></li>
+    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+  </ul>
+
+  <ul *ngIf="authService.isLogged">
+    <li><a routerLink="/agency" routerLinkActive="active">Inicio</a></li>
+    <li><a routerLink="/agency/cars" routerLinkActive="active">Autos</a></li>
+    <li><a routerLink="/agency/tours" routerLinkActive="active">Tours</a></li>
+    <li><a routerLink="/agency/account" routerLinkActive="active">Mi Cuenta</a></li>
+    <li><a (click)="authService.logout()" style="color: #fff; cursor: pointer;">Salir</a></li>
+  </ul>
+</div>

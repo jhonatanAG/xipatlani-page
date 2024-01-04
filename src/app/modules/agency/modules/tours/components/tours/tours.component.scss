@@ -1,0 +1,29 @@
+@import 'src/styles.scss';
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: $color-1;
+}
+
+.card {
+  height: 100%;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  box-shadow: 0px 0px 8px 3px #d6d6d6;
+}
+
+.spacer-card-bottom {
+  margin-bottom: 20px;
+}
+
+.loader {
+  text-align: center;
+}

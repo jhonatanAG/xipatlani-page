@@ -1,0 +1,20 @@
+<app-banner></app-banner>
+
+<div class="container">
+  <div class="spacer-section-bottom">
+    <h2 class="subtittle-1">Visita la lista de destinos que tenemos para ti</h2>
+  </div>
+
+  <div class="loader" *ngIf="load">
+    <load-ellipsis></load-ellipsis>
+  </div>
+
+  <div class="row" *ngIf="!load">
+    <div class="col-md-4 spacer-card-bottom" *ngFor="let destiny of destinations">
+      <div class="card" (click)="goDestiny(destiny.id, destiny.name)">
+        <img class="card-img-top" [src]="destiny.image" alt="Card image cap">
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// colors
+$color-1: #2580B1;
+
+.contact-button {
+  font-size: 20px;
+}
+
+.spacer-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.spacer-section-small {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.spacer-section-top {
+  padding-top: 50px;
+}
+
+.spacer-section-small-top {
+  padding-top: 30px;
+}
+
+.spacer-section-bottom {
+  padding-bottom: 50px;
+}
+
+.spacer-section-small-bottom {
+  padding-bottom: 30;
+}
+
+.container-image {
+  padding: 10px;
+  border: solid 1px;
+  border-color: #d9d9d9;
+}
+
+.tag {
+  background-color: $color-1;
+  color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.subtittle-1 {
+  font-size: 35px;
+  margin: 30px 0px;
+  font-weight: 700;
+  line-height: 3rem
+}
+
+.subtittle-2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 16px;
+}
+
+.description-big {
+  font-size: 22px;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.more {
+  color: $color-1;
+  font-size: 16px;
+  font-weight: 500;
+}

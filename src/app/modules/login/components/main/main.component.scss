@@ -1,0 +1,61 @@
+img {
+  width: 30%;
+}
+
+h2 {
+  font-weight: bold;
+  color: #181717;
+}
+
+.spacer-form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+}
+
+@media (min-width: 961px) {
+  .login {
+    width: 30%;
+    height: 40rem;
+    margin: 3rem auto;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+}
+
+.contact-button {
+  border: 1px solid #201E1F;
+  background-color: #fff;
+  color: #201E1F;
+}
+
+.contact-button:hover {
+  border: 1px solid #201E1F;
+  background-color: #2B57A4;
+  color: #fff;
+}
+
+@media (min-width: 551px) and (max-width: 960px) {
+  .login {
+    width: 30%;
+    height: 40rem;
+    margin: 3rem auto;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .login {
+    width: 80%;
+    height: 40rem;
+    margin: 3rem auto;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+}

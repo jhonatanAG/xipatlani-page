@@ -1,0 +1,69 @@
+<div class="container spacer">
+  <div class="card">
+    <div class="card-body">
+      <div *ngIf="!client" style="text-align: center; margin: 100px 0;">
+        <load-ellipsis></load-ellipsis>
+      </div>
+      <div *ngIf="client">
+        <h2>Reportes</h2>
+        <h3>Cliente: {{ client.idIcaav }}</h3>
+        <h3>Nombre: {{ client.name }}</h3>
+        <div *ngIf="!reportPagination" style="text-align: center; margin: 100px 0;">
+          <load-ellipsis></load-ellipsis>
+        </div>
+        <div *ngIf="reportPagination">
+          <p style="font-weight: bold;">Busqueda</p>
+          <div class="row">
+            <div class="col-md-3">
+              <label for="month-select">Mes</label>
+              <select name="month-select" class="form-control form-control-sm" [(ngModel)]="monthSelected">
+                <option *ngFor="let month of monthsList">{{ month }}</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="year-select">Año</label>
+              <select name="year-select" class="form-control form-control-sm" [(ngModel)]="yearSelected">
+                <option *ngFor="let year of yearsList">{{ year }}</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <button type="button" class="btn btn btn-primary" (click)="searhReports()">
+                Buscar
+              </button>
+            </div>
+            <div class="col-md-3">
+              <button type="button" class="btn btn btn-secondary" (click)="getReports()">
+                Ver todos
+              </button>
+            </div>
+          </div>
+          <table class="table spacer">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nomnre</th>
+                <th scope="col">Mes</th>
+                <th scope="col">commentarios</th>
+                <th scope="col">Descarga</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let report of reportPagination.reports">
+                <th scope="row">{{ report.id }}</th>
+                <td>{{ report.name }}</td>
+                <td>{{ report.month }} - {{ report.year }}</td>
+                <td>{{ report.comments }}</td>
+                <td><a href="{{report.urlFile}}" target="_blank">
+                    Click Para descargar
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <gen-pagination [pagination]="reportPagination.pagination" (changePage)="changePagePagination($event)">
+          </gen-pagination>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

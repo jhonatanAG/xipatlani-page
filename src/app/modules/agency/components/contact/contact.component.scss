@@ -1,0 +1,54 @@
+@import 'src/styles.scss';
+
+.content {
+  text-align: center;
+}
+
+.box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon {
+  color: $color-1;
+  transform: scale(2);
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  box-shadow: 0px 0px 8px 3px #d6d6d6;
+}
+
+form {
+  text-align: start;
+}
+
+.contact-button {
+  border: 1px solid #201E1F;
+  background-color: #fff;
+  color: #201E1F;
+}
+
+.contact-button:hover {
+  border: 1px solid #201E1F;
+  background-color: #2B57A4;
+  color: #fff;
+}
+
+.form-box {
+  width: 100%;
+  margin-bottom: 10px;
+  border: solid 1px;
+  border-color: #d9d9d9;
+  padding: 15px;
+}
+
+textarea {
+  height: 10rem;
+}
